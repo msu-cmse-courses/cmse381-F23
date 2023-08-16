@@ -1,2 +1,5 @@
-# cmse381-F23
-Course content for CMSE381 - Fall 2023, taught my Dr Liz Munch
+# CMSE381 - Fall 2022
+
+## Dr Elizabeth Munch
+
+This course has the contents for the CMSE381 course in Fall 2022. Check back here for class slides and jupyter notebooks.
