@@ -6,14 +6,38 @@
 
 ### Instructions
 
+<span style="color:violet">Note that the problems in the text often specifically talk about the `statsmodels` package. Most of my examples in class do the same thing but with the `sklearn` package. Throughout the course, if a problem asks you to do something, you can always answer by using either package.</span>
+
 This homework covers three classes. Problems listed below are from [the textbook](https://www.statlearning.com/).
 
 - Fri 9/1, we covered Ch 2.2.1 - 2.2.2
   - 2.4.3 (*Note we have only done irreduceable error, not Bayes error since that has to do with classification*)
   - 2.4.8
-- Wed 9/6, we covered Sec 3.1 - Simple linear Regression
+    - Note that there is a typo in 2.4.8f, at least with respect to the verson of the data set we have. The information in the `Top10perc` column is a percentage 0-100 rather than a value between 0 and 1. So use the following replacement code instead.
+
+    ```python
+    college['Elite'] = pd.cut(college['Top10perc'],
+    [0,50,100],
+    labels=['No', 'Yes'])
+    ```
+
+- Wed 9/6 and Fri 9/8, we covered Sec 3.1 - Simple linear Regression
   - 3.7.8 (a) and (b)
-    - Note: 3.7.8 (a).iv: we haven't talked about prediction intervals, just do the confidence interval for horsepower
+    - Note: 3.7.8 (a).iv: we haven't talked about prediction intervals, just do the confidence interval for the coefficients for the horsepower regression ($\beta_0$ and $\beta_1$).
+    - A note on code. The book's use of the `statsmodels` package is slightly different than the examples provided in the jupyter notebooks in class. In particular, in the book's lab examples and in the homework statement they implicitly use
+  
+      ```python
+      import statsmodels.api as sm
+      ```
+
+      while we use
+
+      ```python
+      import statsmodels.formula.api as smf
+      ```
+
+      This results in slight diferences in code, in particular whether the funciton call you use is `OLS` or `ols`. You may use whichever works for you, the answers should be the same.
+
 - Fri 9/8, we covered Sec 3.2 - Multiple Linear Regression
   - 3.7.1
 
