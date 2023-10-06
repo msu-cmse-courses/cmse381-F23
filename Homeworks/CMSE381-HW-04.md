@@ -20,7 +20,8 @@ These problems don't quite line up to individual classes, so I will just list th
   - **Note:** Here they use "validation set" for what I usually call "testing set".
   - **Hint:** For part (c), you do not need to regenerate the data. You have the same data set, but you are generating a new split of the data. This could be as easy as setting a new seed.
 - 5.4.8 (a-e)
-  - Along with the problems listed in the textbook, do the following. Repeat part (c) using $k$-fold CV for $k=5,10,15,20$. Plot your results for error vs degree for all these plus the LOOCV version. What do you notice?
+  - Along with the problems listed in the textbook, do the following. Repeat part (c) using $k$-fold CV for $k=5,10,15,20$. Plot your results for error vs degree for all these plus the LOOCV version. What do you notice? <span style="color: green"> You don't need to plot this for the training error, it's annoyingly difficult to get that out of the easy-mode version of $k$-fold CV. If you really want to try, take a look [here](https://scikit-learn.org/stable/modules/cross_validation.html#the-cross-validate-function-and-multiple-metric-evaluation).</span>
+
 
 *Note: the content from Mon, 10/9, will be included on HW4 due next week.*
 
