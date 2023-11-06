@@ -29,21 +29,15 @@ Problems listed below are from [the textbook](https://www.statlearning.com/).
 ```math
 f(X) = \beta_0 + \beta_1C_1(X) + \beta_2C_2(X)
 ```
-
-&nbsp;&nbsp;&nbsp;&nbsp;with $\beta_0 = 2$, $\beta_1 = 3$, and $\beta_2 = -1$, sketch the graph learned.
+    - with $\beta_0 = 2$, $\beta_1 = 3$, and $\beta_2 = -1$, sketch the graph learned.
 
 - Part B.
-  - I am learning a cubic spline of some data with a single knot at $z_1 = 4$. As noted in class and in Sec 7.4.3, we have a basis for learning cubic spline data. *(As a side note, my lectures have knots as $`z_1,\cdots,z_K`$ and the book uses $`\xi_1, \cdots, \xi_K`$ but they're the same thing.)* I'm going to build a cubic spline with basis functions
+  - I am learning a cubic spline of some data with a single knot at $z_1 = 4$. As noted in class and in Sec 7.4.3, we have a basis for learning cubic spline data. *(As a side note, my lectures have knots as $`z_1,\cdots,z_K`$ and the book uses $`\xi_1, \cdots, \xi_K`$ but you should treat them as the same thing.)* I'm going to build a cubic spline with basis functions
     - $b_1(X) = X$  
     - $b_2(X) = X^2$  
     - $b_3(X) = X^3$  
     - $`b_4(X) =h(x,4)= \begin{cases} (x-4)^3 & x >4 \\ 0 & \text{else} \end{cases}`$  
-  - Assume the learned model was
-
-  ```math
-  f(X) = 3 + b_1(X) - 2 b_2(X) + 3 b_3(X) - 4b_4(X)
-  ```
-
+  - Assume the learned model was $`f(X) = 3 + b_1(X) - 2 b_2(X) + 3 b_3(X) - 4b_4(X)`$
   - (i) Write the equation for the piecewise polynomial that this function represents. Draw a graph of the function.
   - (ii) What are the requirements for a piecewise polynomial function to be a cubic spline?
   - (iii) Check that your piecewise polynomial from (i) fits these requirements.
