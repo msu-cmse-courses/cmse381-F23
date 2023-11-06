@@ -22,24 +22,29 @@ Problems listed below are from [the textbook](https://www.statlearning.com/).
   - (a) Perform polynomial regression to predict wage using age. Use cross-validation to select the optimal degree $d$ for the polynomial. What degree was chosen, ~~and how does this compare to the results of hypothesis testing using ANOVA~~? Make a plot of the resulting polynomial fit to the data.
   - Additional part (call it c): Fit a cubic spline to predict `wage` using `age`. How does this function compare to the polynomial (particularly, the degree $d=3$ polynomial) found in part (a)?
 - *Added question 4*
-  - Part A. I am learning a step function of some data, and I'm using knots $c_1 = 3$ and $c_2 = 7$. 
+  - Part A. I am learning a step function of some data, and I'm using knots $c_1 = 3$ and $c_2 = 7$.
     - (i) Write equations for each of the basis functions $C_0(X)$, $C_1(X)$, and $C_2(X)$. Sketch the three functions.
-    - (ii) If the model learned was 
-      $$
-      f(X) = \beta_0 + \beta_1C_1(X) + \beta_2C_2(X)
-      $$
+    - (ii) If the model learned was
+
+```math
+f(X) = \beta_0 + \beta_1C_1(X) + \beta_2C_2(X)
+```
+
       with $\beta_0 = 2$, $\beta_1 = 3$, and $\beta_2 = -1$, sketch the graph learned.
-  - Part B.
-    - I am learning a cubic spline of some data with a single knot at $c_1 = 4$. As noted in class and in Sec 7.4.3, we have a basis for learning cubic spline data. *(As a side note, my lectures have knots as $c_1,\cdots,c_K$ and the book uses $\xi_1, \cdots, \xi_K$ but they're the same thing.)* I'm going to build a cubic spline with basis functions 
-      - $b_1(X) = X$  
-      - $b_2(X) = X^2$  
-      - $b_3(X) = X^3$  
-      - $b_4(X) =h(x,4)= \begin{cases} (x-4)^3 & x >4 \\ 0 & \text{else} \end{cases}$  
-    - Assume the learned model was 
-      $$ f(X) = 3 + b_1(X) - 2 b_2(X) + 3 b_3(X) - 4b_4(X)$$
-    - (i) Write the equation for the piecewise polynomial that this function represents. Draw a graph of the function.
-    - (ii) What are the requirements for a piecewise polynomial function to be a cubic spline?
-    - (iii) Check that your piecewise polynomial from (i) fits these requirements.
+
+- Part B.
+  - I am learning a cubic spline of some data with a single knot at $z_1 = 4$. As noted in class and in Sec 7.4.3, we have a basis for learning cubic spline data. *(As a side note, my lectures have knots as $`z_1,\cdots,z_K`$ and the book uses $\xi_1, \cdots, \xi_K$ but they're the same thing.)* I'm going to build a cubic spline with basis functions
+    - $b_1(X) = X$  
+    - $b_2(X) = X^2$  
+    - $b_3(X) = X^3$  
+    - $`b_4(X) =h(x,4)= \begin{cases} (x-4)^3 & x >4 \\ 0 & \text{else} \end{cases}`$  
+  - Assume the learned model was
+      ```math
+      f(X) = 3 + b_1(X) - 2 b_2(X) + 3 b_3(X) - 4b_4(X)
+      ```
+  - (i) Write the equation for the piecewise polynomial that this function represents. Draw a graph of the function.
+  - (ii) What are the requirements for a piecewise polynomial function to be a cubic spline?
+  - (iii) Check that your piecewise polynomial from (i) fits these requirements.
 
 ### Submit homework to Crowdmark
 
