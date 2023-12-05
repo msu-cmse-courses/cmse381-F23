@@ -25,6 +25,7 @@ This project provides students with an opportunity to work on real-world dataset
 - Dr. Munch has final veto power on any data set choice.
 
 ## Project Deliverables
+
 You will submit a Jupyter Notebook containing the following for each of your data sets.
 
 - A description of the data, including information about the variables.
@@ -47,3 +48,5 @@ Projects will be assessed based on the following criteria:
 3. Effective use of tools and libraries.
 4. Clarity and organization of Jupyter Notebooks, including a combination of markdown cells with explanations and well-commented code to run the tasks.
 5. Interpretation of results and insights.
+
+The full rubric for grading can be found here:[Project Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vQk42F2jL9AMONG49_NJwSRxgO0W5pUvfaSlK-Ki6fIMz93RWnBTPRmd2RGbBXe2uoo329KXzzq7Lwq/pubhtml).
